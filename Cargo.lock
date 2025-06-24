@@ -296,11 +296,11 @@ name = "avian3d"
 version = "0.2.0"
 source = "git+https://github.com/Jondolf/avian.git?rev=910ab04#910ab042828986e27f32fc2e27f6f2ee5576df1e"
 dependencies = [
- "avian_derive",
+ "avian_derive 0.2.2 (git+https://github.com/Jondolf/avian.git?rev=910ab04)",
  "bevy",
- "bevy_heavy",
+ "bevy_heavy 0.1.0",
  "bevy_math",
- "bevy_transform_interpolation",
+ "bevy_transform_interpolation 0.1.0",
  "bitflags 2.9.0",
  "derive_more",
  "itertools 0.13.0",
@@ -308,6 +308,38 @@ dependencies = [
  "parry3d",
  "parry3d-f64",
  "thread_local",
+]
+
+[[package]]
+name = "avian3d"
+version = "0.3.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0feaf6ed522e3e55130d820bfa2a3f3395092cbee2c986cfc1a464b60b50b4ca"
+dependencies = [
+ "avian_derive 0.2.2 (registry+https://github.com/rust-lang/crates.io-index)",
+ "bevy",
+ "bevy_heavy 0.2.0",
+ "bevy_math",
+ "bevy_transform_interpolation 0.2.0",
+ "bitflags 2.9.0",
+ "derive_more",
+ "itertools 0.13.0",
+ "nalgebra",
+ "parry3d",
+ "parry3d-f64",
+ "thread_local",
+]
+
+[[package]]
+name = "avian_derive"
+version = "0.2.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "12b257f601a1535e0d4a7a7796f535e3a13de62fd422b16dff7c14d27f0d4048"
+dependencies = [
+ "proc-macro-error2",
+ "proc-macro2",
+ "quote",
+ "syn",
 ]
 
 [[package]]
@@ -727,6 +759,16 @@ dependencies = [
 name = "bevy_heavy"
 version = "0.1.0"
 source = "git+https://github.com/Jondolf/bevy_heavy#3905efe581700296de8f48d33388c5471dfca785"
+dependencies = [
+ "bevy_math",
+ "bevy_reflect",
+]
+
+[[package]]
+name = "bevy_heavy"
+version = "0.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "34ccc861fea2ff58c67f4df119512e204050bd7631a3a9c65e1a5e9d162cce28"
 dependencies = [
  "bevy_math",
  "bevy_reflect",
@@ -1277,6 +1319,15 @@ dependencies = [
 name = "bevy_transform_interpolation"
 version = "0.1.0"
 source = "git+https://github.com/Jondolf/bevy_transform_interpolation#9fd7fe92c32e2d30e38b80566dfa7b740119b593"
+dependencies = [
+ "bevy",
+]
+
+[[package]]
+name = "bevy_transform_interpolation"
+version = "0.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "72c7c6c4e6a3d5415b3a29a17bd20c17cd0e2f068b96b24e263316d58d5346ea"
 dependencies = [
  "bevy",
 ]
@@ -2099,7 +2150,7 @@ dependencies = [
 name = "examples_common"
 version = "0.1.0"
 dependencies = [
- "avian3d",
+ "avian3d 0.2.0",
  "bevy",
  "bevy_enhanced_input",
  "kcc_prototype",
@@ -2678,7 +2729,7 @@ dependencies = [
 name = "kcc_prototype"
 version = "0.1.0"
 dependencies = [
- "avian3d",
+ "avian3d 0.3.1",
  "bevy",
  "bevy_enhanced_input",
  "examples_common",
